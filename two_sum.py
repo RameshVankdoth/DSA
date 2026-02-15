@@ -2,7 +2,7 @@ arr = [0, -1, 2, -3, 1]
 target = -2
 
 # Two elements in the array who has sum = target
-
+arr = sorted(arr)
 # 1. Naive approach O(n^2)
 for i in range(len(arr)):
     for j in range(i + 1, len(arr)):
@@ -16,7 +16,7 @@ b = len(arr) - 1
 while a < b:
     add = arr[a] + arr[b]
     if target == add:
-        print(arr[a], arr[b])
+        print(a, b)
         break
     elif add < target:
         a += 1
